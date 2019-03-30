@@ -7,7 +7,7 @@
 """
 Created on Tue Jan 15 14:07:00 2019
 
-@author: sankalp
+@author: darshan
 """
 
 import numpy as np
@@ -111,7 +111,7 @@ try:
       
       #insert into mysql db
       
-      mydb = mysql.connector.connect( host="localhost",  user="siddas", passwd="siddas@123",  database="diztro")
+      mydb = mysql.connector.connect( host="localhost",  user="***", passwd="***",  database="diztro")
       mycursor = mydb.cursor()
       sql = "INSERT INTO dldump (storeid, fname,ProcessedPath,status,fridgeid) VALUES (%s, %s,%s, %s,%s)"
       val = (int(storeid), PATH_TO_TEST_IMAGES_DIR+inputimg,resultimg,1,int(fridgeid))
@@ -137,7 +137,7 @@ try:
 
 except Exception as e:
   print(e)
-  mydb = mysql.connector.connect( host="localhost",  user="siddas", passwd="siddas@123",  database="diztro")
+  mydb = mysql.connector.connect( host="localhost",  user="***", passwd="***",  database="diztro")
   mycursor = mydb.cursor()
   sql = "INSERT INTO dldump (storeid, fname,status,fridgeid) VALUES (%s, %s, %s,%s)"
   val = (int(storeid), PATH_TO_TEST_IMAGES_DIR+inputimg,-1,int(fridgeid))
